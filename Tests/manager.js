@@ -1,6 +1,5 @@
 const Manager = require("../lib/Manager");
 
-
 describe("Manager", () => {
     describe("Object", () => {
         test("creates a Manager object", () => {
