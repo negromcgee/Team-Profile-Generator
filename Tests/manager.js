@@ -1,14 +1,20 @@
-const Manager = require("../lib/manager");
+const Manager = require("../lib/Manager");
+
 
 describe("Manager", () => {
-    describe("Initialization", () => {
-        it("should inherit values and methods from the parent class 'Employee'", () => {
-            const manager = new Manager("Ruby", 5, "ruby@Yahoo.com", 55);
+    describe("Object", () => {
+        test("creates a Manager object", () => {
+            const manager = new Manager("Ruby", 2, "Rubyname@gmail.com", 22);
 
-            const Manager = require("../lib/manager");
-
-            expect(manager.getName()).toEqual("Ruby");
-            expect(manager.getId()).toEqual(5);
-            expect(manager.getEmail()).toEqual("Ruby@Yahoo.com");
+            expect(manager.officeNumber).toEqual(expect.any(Number));
         });
-        
+    });
+
+    describe("Role", () => {
+        test("gets role of employee", () => {
+            const manager = new Manager("Ruby", 123, "Rubyname@gmail.com");
+
+            expect(manager.getRole()).toEqual("Manager");
+        });
+    });
+});
