@@ -26,3 +26,20 @@ describe("Employee", () => {
             expect(employee.getId()).toEqual(expect.any(Number));
         });
     });
+
+    describe("Email", () => {
+        test("gets employee email", () => {
+            const employee = new Employee("Tiffany", 6, "tifftaff@gmail.com");
+
+            expect(employee.getEmail()).toEqual(expect.stringContaining(employee.email.toString()));
+        });
+    });
+
+    describe("Role", () => {
+        test("gets role of employee", () => {
+            const employee = new Employee("Tiffany", 6, "tifftaff@gmail.com");
+
+            expect(employee.getRole()).toEqual("Employee");
+        });
+    });
+}); 
