@@ -6,7 +6,7 @@ describe("Intern", () => {
             const intern = new Intern("Tiffany", 6, "tifftaff@gmail.com", "UofA");
 
             expect(intern.getName()).toEqual("Tiffany");
-            expect(intern.getId()).toEqual(7);
+            expect(intern.getId()).toEqual(6);
             expect(intern.getEmail()).toEqual("tifftaff@gmail.com");
         });
         it("should add the additional property 'school' to the given object", () => {
